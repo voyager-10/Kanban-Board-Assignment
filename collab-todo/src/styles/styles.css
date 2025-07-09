@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.board {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.column {
+  background: #f2f2f2;
+  padding: 1rem;
+  border-radius: 10px;
+  flex: 1;
+  min-width: 250px;
+  max-width: 300px;
+}
+
+.card {
+  background: white;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  border-radius: 5px;
+  cursor: grab;
+  transition: transform 0.2s ease-in;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  margin: 2rem auto;
+  gap: 1rem;
+}
+
+input, button {
+  padding: 0.5rem;
+}
+
+.column {
+  min-height: 200px;
+  padding: 1rem;
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  transition: background 0.3s ease-in-out;
+}
+
+.column:hover {
+  background: #f9f9f9;
+}
+
+.card {
+  cursor: grab;
+}
+
+.card.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+@media (max-width: 600px) {
+  .board {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.card {
+  animation: slideIn 0.3s ease-in;
+}

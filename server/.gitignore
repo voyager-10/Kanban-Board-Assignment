@@ -1,0 +1,15 @@
+# dependencies
+/node_modules
+
+# runtime files
+/logs
+*.log
+npm-debug.log*
+
+# env config
+.env
+
+# IDE/editor files
+.vscode
+.DS_Store
+*.swp
